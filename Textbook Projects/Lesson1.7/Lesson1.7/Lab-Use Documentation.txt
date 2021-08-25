@@ -1,0 +1,12 @@
+1) 
+ - Drawing and animation
+ - Layout and subview management
+ - Event handling
+
+2) subview
+
+3) superview
+
+4) Frames defines the dimensions and origin in the coordinate system of the superview.
+
+5) Bounds property defines the internal dimensions of the UIView element.
