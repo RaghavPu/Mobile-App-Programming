@@ -98,8 +98,10 @@ class ViewController: UIViewController {
             print("Got hit!")
             score += 1
             scoreLabel.text = "Score: \(score)"
-            reset()
         }
+        
+        UIView.animate(withDuration: 0.2, animations: {self.mole.alpha = 0}, completion: { finished in self.mole.isHidden = true})
+        reset()
     }
     
     func initializeTimerLabel() {
@@ -137,11 +139,13 @@ class ViewController: UIViewController {
     
     
     func reset() {
+        UIView.animate(withDuration: 0.2, animations: {self.mole.alpha = 1}, completion: { finished in self.mole.isHidden = false})
         timerSpeed = max(timerSpeed - 0.1, 0.6)
         let x = Int.random(in: xStart...xEnd)
         let y = Int.random(in: yStart...yEnd)
         mole.frame.origin.x = CGFloat(x);
         mole.frame.origin.y = CGFloat(y);
+        
         time = timerSpeed
     }
     
