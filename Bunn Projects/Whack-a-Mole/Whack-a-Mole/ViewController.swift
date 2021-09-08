@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var timer = Timer()
     
     var score = 0;
+    var timeScore = 0.0;
+    
     var scoreLabel = UILabel()
     var field = UILabel()
     
@@ -101,12 +103,12 @@ class ViewController: UIViewController {
         }
         
         UIView.animate(withDuration: 0.2, animations: {self.mole.alpha = 0}, completion: { finished in self.mole.isHidden = true})
-        reset()
+        reposition()
     }
     
     func initializeTimerLabel() {
         timeLabel.frame = CGRect(x: screenWidth - 100, y: Int(scoreLabel.frame.origin.y), width: 100, height: screenHeight / 10)
-        timeLabel.text = "Time: \(String(format: "%.1f", time))"
+        timeLabel.text = "Time: \(String(format: "%.1f", timeScore))"
         view.addSubview(timeLabel)
         self.view = view
     }
@@ -122,31 +124,67 @@ class ViewController: UIViewController {
         startButton.titleLabel?.font = .systemFont(ofSize: 10)
         startButton.layer.cornerRadius = 10
         startButton.layer.masksToBounds = true
+        startButton.isHidden = false
+        startButton.alpha = 1
         view.addSubview(startButton)
         self.view = view;
     }
     
     @objc func timerFunction(_ sender: UIButton) {
         time -= 0.1
-        timeLabel.text = "Time: \(String(format: "%.1f", time))"
+        timeScore += 0.1
+        timeLabel.text = "Time: \(String(format: "%.1f", timeScore))"
 
         if time <= 0.1 {
             score -= 1;
             scoreLabel.text = "Score: \(score)"
-            reset()
+            
+            if (score <= 0)
+            {
+                let gameOverAlert = UIAlertController(title: "Game Over", message: "Your Score: \(round(10.0 * timeScore) / 10.0)s", preferredStyle: UIAlertController.Style.alert)
+                gameOverAlert.addAction(UIAlertAction(title: "Play Again", style: UIAlertAction.Style.default, handler: nil))
+                self.present(gameOverAlert, animated: true, completion: nil)
+                reset();
+            }
+            reposition()
         }
+        
     }
     
     
-    func reset() {
+    func reposition() {
         UIView.animate(withDuration: 0.2, animations: {self.mole.alpha = 1}, completion: { finished in self.mole.isHidden = false})
-        timerSpeed = max(timerSpeed - 0.1, 0.6)
+        timerSpeed = max(timerSpeed - 0.1, 0.7)
         let x = Int.random(in: xStart...xEnd)
         let y = Int.random(in: yStart...yEnd)
         mole.frame.origin.x = CGFloat(x);
         mole.frame.origin.y = CGFloat(y);
         
         time = timerSpeed
+    }
+    
+    func reset() {
+        gameStarted = false;
+        
+        time = 2.0
+        timerSpeed = 2.0
+        
+        score = 0
+        timeScore = 0
+        
+        scoreLabel.text = "Score: \(score)"
+        timeLabel.text = "Time: \(String(format: "%.1f", timeScore))"
+
+        
+        timer.invalidate()
+        timer = Timer()
+        
+        DispatchQueue.main.async {
+            self.mole.frame.origin.x = self.field.frame.origin.x + 30
+            self.mole.frame.origin.y = self.field.frame.origin.y + 30
+            self.startButton.isHidden = false
+            self.startButton.alpha = 1
+        }
     }
     
 }
