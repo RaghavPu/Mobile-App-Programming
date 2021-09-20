@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            UIView.animate(withDuration: 5, animations: {self.answerLabel.alpha = 0}, completion: {finished in })
+            answerLabel.alpha = 0
         }
     }
     

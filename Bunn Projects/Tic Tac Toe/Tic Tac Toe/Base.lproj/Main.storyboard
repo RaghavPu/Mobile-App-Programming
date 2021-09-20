@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jj-Ir-4uv">
+                                <rect key="frame" x="31" y="254" width="328" height="336"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="Wpu-QU-wbS">
+                                        <rect key="frame" x="20" y="20" width="288" height="297"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dCX-B6-tHK">
+                                        <rect key="frame" x="20" y="31" width="288" height="286"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qQP-Gx-rIU">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOG-3d-MCE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="DnK-or-E2P"/>
+                                                            <constraint firstAttribute="width" constant="90" id="qRW-QR-ZP3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YtJ-70-JJ9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-4u-aS4">
+                                                        <rect key="frame" x="99" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="CrD-5Y-1QI"/>
+                                                            <constraint firstAttribute="width" constant="90" id="YxK-dW-CDK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCB-cr-80r"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AY7-L0-8OD">
+                                                        <rect key="frame" x="198" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="j2d-qD-xvV"/>
+                                                            <constraint firstAttribute="height" constant="90" id="jFw-Yk-vwn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xr7-h3-Jbb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="1ep-9k-RLq">
+                                                <rect key="frame" x="0.0" y="98" width="288" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a08-vt-z1R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="1g1-99-xmG"/>
+                                                            <constraint firstAttribute="width" constant="90" id="dfh-Hs-9Eq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHb-M7-YQ3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KE-hE-vru">
+                                                        <rect key="frame" x="99" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="O4N-w6-5W4"/>
+                                                            <constraint firstAttribute="width" constant="90" id="bNK-7F-QcY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="soE-Af-P5J"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZv-9h-DgQ">
+                                                        <rect key="frame" x="198" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="5hW-5Y-nHu"/>
+                                                            <constraint firstAttribute="width" constant="90" id="ZsB-oO-7OF"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWd-8z-mhO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Rqq-sp-g4g">
+                                                <rect key="frame" x="0.0" y="196" width="288" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi8-wz-TkT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="eDU-AI-jrX"/>
+                                                            <constraint firstAttribute="height" constant="90" id="tG9-av-Lkz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVx-2R-bFL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prL-CL-bte">
+                                                        <rect key="frame" x="99" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="LGl-T9-XDQ"/>
+                                                            <constraint firstAttribute="width" constant="90" id="x3t-oC-ThJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4IX-s0-ooc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzo-6b-FwX">
+                                                        <rect key="frame" x="198" y="0.0" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="27L-hY-9DC"/>
+                                                            <constraint firstAttribute="height" constant="90" id="TeC-hV-mf7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="pressButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RwA-jO-V5i"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dCX-B6-tHK" secondAttribute="bottom" constant="19" id="7Z0-WK-h4h"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wpu-QU-wbS" secondAttribute="trailing" constant="20" symbolic="YES" id="B4K-lT-RzE"/>
+                                    <constraint firstItem="Wpu-QU-wbS" firstAttribute="top" secondItem="7jj-Ir-4uv" secondAttribute="top" constant="20" symbolic="YES" id="JF9-9e-lFn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wpu-QU-wbS" secondAttribute="bottom" constant="19" id="VDA-wA-aPL"/>
+                                    <constraint firstItem="dCX-B6-tHK" firstAttribute="leading" secondItem="7jj-Ir-4uv" secondAttribute="leading" constant="20" symbolic="YES" id="XNb-je-YBp"/>
+                                    <constraint firstItem="Wpu-QU-wbS" firstAttribute="leading" secondItem="7jj-Ir-4uv" secondAttribute="leading" constant="20" symbolic="YES" id="noQ-Zo-BfI"/>
+                                    <constraint firstItem="dCX-B6-tHK" firstAttribute="top" secondItem="7jj-Ir-4uv" secondAttribute="top" constant="31" id="sGB-aQ-Y1D"/>
+                                    <constraint firstAttribute="trailing" secondItem="dCX-B6-tHK" secondAttribute="trailing" constant="20" symbolic="YES" id="tLI-O2-JsV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7jj-Ir-4uv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="210" id="bfR-y0-Uei"/>
+                            <constraint firstItem="7jj-Ir-4uv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cfT-rE-NzH"/>
+                            <constraint firstItem="7jj-Ir-4uv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ige-AI-bey"/>
+                            <constraint firstItem="7jj-Ir-4uv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="y4V-oh-wTC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eight" destination="prL-CL-bte" id="wyq-7G-a9j"/>
+                        <outlet property="five" destination="6KE-hE-vru" id="FUh-a1-yF1"/>
+                        <outlet property="four" destination="a08-vt-z1R" id="XXW-VX-0oY"/>
+                        <outlet property="nine" destination="yzo-6b-FwX" id="by0-et-a7q"/>
+                        <outlet property="one" destination="KOG-3d-MCE" id="ea3-Q8-QDD"/>
+                        <outlet property="seven" destination="qi8-wz-TkT" id="J9x-L4-AN9"/>
+                        <outlet property="six" destination="eZv-9h-DgQ" id="jNt-bm-BPO"/>
+                        <outlet property="three" destination="AY7-L0-8OD" id="u9g-9V-Wl2"/>
+                        <outlet property="two" destination="abJ-4u-aS4" id="BVI-Yh-TxL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434.78260869565219" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="board" width="340" height="340"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
