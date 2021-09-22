@@ -163,31 +163,93 @@
                                     <constraint firstAttribute="trailing" secondItem="dCX-B6-tHK" secondAttribute="trailing" constant="20" symbolic="YES" id="tLI-O2-JsV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqZ-hO-a0e">
+                                <rect key="frame" x="146" y="139" width="98" height="102"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-tZ-az0">
+                                        <rect key="frame" x="20" y="23.666666666666657" width="58" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2H-8N-W8d">
+                                        <rect key="frame" x="39" y="42.666666666666657" width="20" height="39.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="7iS-tZ-az0" firstAttribute="leading" secondItem="HqZ-hO-a0e" secondAttribute="leading" constant="20" id="6e3-W3-RUZ"/>
+                                    <constraint firstItem="h2H-8N-W8d" firstAttribute="top" secondItem="7iS-tZ-az0" secondAttribute="bottom" constant="1" id="WBz-l5-9P7"/>
+                                    <constraint firstAttribute="bottom" secondItem="h2H-8N-W8d" secondAttribute="bottom" constant="20" id="cds-2P-Vqd"/>
+                                    <constraint firstItem="7iS-tZ-az0" firstAttribute="centerX" secondItem="h2H-8N-W8d" secondAttribute="centerX" id="iU5-OZ-85M"/>
+                                    <constraint firstItem="h2H-8N-W8d" firstAttribute="centerX" secondItem="HqZ-hO-a0e" secondAttribute="centerX" id="nV2-zv-nmp"/>
+                                    <constraint firstItem="h2H-8N-W8d" firstAttribute="leading" secondItem="HqZ-hO-a0e" secondAttribute="leading" constant="39" id="tM8-Lu-LyD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-kz-3hr">
+                                <rect key="frame" x="146" y="643" width="98" height="102"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfS-S1-oR4">
+                                        <rect key="frame" x="19" y="20" width="60" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTJ-Yd-NQh">
+                                        <rect key="frame" x="37" y="39" width="24" height="39.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="OfS-S1-oR4" firstAttribute="leading" secondItem="NyZ-kz-3hr" secondAttribute="leading" constant="19" id="0bf-Du-1bT"/>
+                                    <constraint firstItem="LTJ-Yd-NQh" firstAttribute="centerX" secondItem="NyZ-kz-3hr" secondAttribute="centerX" id="Dne-Nu-DyF"/>
+                                    <constraint firstItem="LTJ-Yd-NQh" firstAttribute="top" secondItem="OfS-S1-oR4" secondAttribute="bottom" constant="1" id="JZB-vi-JWI"/>
+                                    <constraint firstItem="OfS-S1-oR4" firstAttribute="top" secondItem="NyZ-kz-3hr" secondAttribute="top" constant="20" id="dAi-mJ-ed3"/>
+                                    <constraint firstItem="OfS-S1-oR4" firstAttribute="centerX" secondItem="NyZ-kz-3hr" secondAttribute="centerX" id="rKg-Yo-Nl3"/>
+                                    <constraint firstItem="LTJ-Yd-NQh" firstAttribute="leading" secondItem="NyZ-kz-3hr" secondAttribute="leading" constant="37" id="uej-jK-wao"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NyZ-kz-3hr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="D5a-Ej-KYQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NyZ-kz-3hr" secondAttribute="bottom" constant="65" id="Iwc-to-vHd"/>
+                            <constraint firstItem="NyZ-kz-3hr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RN8-90-7UK"/>
+                            <constraint firstItem="HqZ-hO-a0e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SNp-qG-nwX"/>
+                            <constraint firstItem="7jj-Ir-4uv" firstAttribute="top" secondItem="HqZ-hO-a0e" secondAttribute="bottom" constant="13" id="Xo5-b3-wzH"/>
                             <constraint firstItem="7jj-Ir-4uv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="210" id="bfR-y0-Uei"/>
+                            <constraint firstItem="NyZ-kz-3hr" firstAttribute="leading" secondItem="HqZ-hO-a0e" secondAttribute="leading" id="ccw-L7-lZT"/>
                             <constraint firstItem="7jj-Ir-4uv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cfT-rE-NzH"/>
                             <constraint firstItem="7jj-Ir-4uv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ige-AI-bey"/>
+                            <constraint firstItem="NyZ-kz-3hr" firstAttribute="top" secondItem="7jj-Ir-4uv" secondAttribute="bottom" constant="53" id="oWm-7B-ojj"/>
+                            <constraint firstItem="HqZ-hO-a0e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="uM2-AN-bRt"/>
                             <constraint firstItem="7jj-Ir-4uv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="y4V-oh-wTC"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="eight" destination="prL-CL-bte" id="wyq-7G-a9j"/>
-                        <outlet property="five" destination="6KE-hE-vru" id="FUh-a1-yF1"/>
-                        <outlet property="four" destination="a08-vt-z1R" id="XXW-VX-0oY"/>
-                        <outlet property="nine" destination="yzo-6b-FwX" id="by0-et-a7q"/>
-                        <outlet property="one" destination="KOG-3d-MCE" id="ea3-Q8-QDD"/>
-                        <outlet property="seven" destination="qi8-wz-TkT" id="J9x-L4-AN9"/>
-                        <outlet property="six" destination="eZv-9h-DgQ" id="jNt-bm-BPO"/>
-                        <outlet property="three" destination="AY7-L0-8OD" id="u9g-9V-Wl2"/>
-                        <outlet property="two" destination="abJ-4u-aS4" id="BVI-Yh-TxL"/>
+                        <outlet property="playerOneView" destination="HqZ-hO-a0e" id="VGx-fG-WZl"/>
+                        <outlet property="playerTwoView" destination="NyZ-kz-3hr" id="eMw-ML-EfE"/>
+                        <outletCollection property="buttons" destination="KOG-3d-MCE" collectionClass="NSMutableArray" id="SWz-tQ-RbN"/>
+                        <outletCollection property="buttons" destination="abJ-4u-aS4" collectionClass="NSMutableArray" id="OIH-76-Ncs"/>
+                        <outletCollection property="buttons" destination="AY7-L0-8OD" collectionClass="NSMutableArray" id="AiX-H2-Ih8"/>
+                        <outletCollection property="buttons" destination="a08-vt-z1R" collectionClass="NSMutableArray" id="TKR-PW-SAt"/>
+                        <outletCollection property="buttons" destination="6KE-hE-vru" collectionClass="NSMutableArray" id="xyx-gB-hzw"/>
+                        <outletCollection property="buttons" destination="eZv-9h-DgQ" collectionClass="NSMutableArray" id="0g1-ka-QNB"/>
+                        <outletCollection property="buttons" destination="qi8-wz-TkT" collectionClass="NSMutableArray" id="VLX-In-fyC"/>
+                        <outletCollection property="buttons" destination="prL-CL-bte" collectionClass="NSMutableArray" id="f6W-lr-fea"/>
+                        <outletCollection property="buttons" destination="yzo-6b-FwX" collectionClass="NSMutableArray" id="c4U-7a-7Go"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434.78260869565219" y="137.94642857142856"/>
+            <point key="canvasLocation" x="433.84615384615381" y="137.91469194312796"/>
         </scene>
     </scenes>
     <resources>
