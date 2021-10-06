@@ -91,6 +91,7 @@ class ViewController: UIViewController {
     func resetGame() {
         time = 10
         gameStarted = false
+        setSliders()
         let newR = Double.random(in: 0.0...1.0)
         let newG = Double.random(in: 0.0...1.0)
         let newB = Double.random(in: 0.0...1.0)
