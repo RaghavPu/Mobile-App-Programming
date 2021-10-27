@@ -5,14 +5,29 @@
  */
 let userInputAge: String = "34e"
 
+func checkAge(stringAge: String) -> Int? {
+    let age = Int(stringAge)
+    if age != nil {
+        print("Welcome")
+    } else {
+        print("Sorry, something went wrong.")
+    }
+    
+    return age
+}
 
 //:  Go back and update your function to return the age as an integer. Will your function always return a value? Make sure your return type accurately reflects this. Call the function and print the return value.
-
+print(checkAge(stringAge: userInputAge))
 
 //:  Imagine you are creating an app for making purchases. Write a function that will take in the name of an item for purchase as a `String` and will return the cost of that item as an optional `Double`. In the body of the function, check to see if the item is in stock by accessing it in the dictionary `stock`. If it is, return the price of the item by accessing it in the dictionary `prices`. If the item is out of stock, return `nil`. Call the function and pass in a `String` that exists in the dictionaries below. Print the return value.
 var prices = ["Chips": 2.99, "Donuts": 1.89, "Juice": 3.99, "Apple": 0.50, "Banana": 0.25, "Broccoli": 0.99]
 var stock = ["Chips": 4, "Donuts": 0, "Juice": 12, "Apple": 6, "Banana": 6, "Broccoli": 3]
 
+func checkPrice(item: String) -> Double? {
+    return stock[item] == 0 ? nil : prices[item]
+}
+
+print(checkPrice(item: "Chip"))
 
 /*:
 [Previous](@previous)  |  page 3 of 6  |  [Next: App Exercise - Food Functions](@next)
