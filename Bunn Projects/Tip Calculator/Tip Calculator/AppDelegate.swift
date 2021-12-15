@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Tip-Calculator
+//  Tip Calculator
 //
-//  Created by Punnam, Raghav S on 11/2/21.
+//  Created by Punnam, Raghav S on 12/1/21.
 //
 
 import UIKit

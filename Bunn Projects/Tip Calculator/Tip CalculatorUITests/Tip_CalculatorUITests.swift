@@ -1,8 +1,8 @@
 //
 //  Tip_CalculatorUITests.swift
-//  Tip-CalculatorUITests
+//  Tip CalculatorUITests
 //
-//  Created by Punnam, Raghav S on 11/2/21.
+//  Created by Punnam, Raghav S on 12/1/21.
 //
 
 import XCTest
