@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        generateRandomNumber()
+        reset()
         
     }
 
@@ -49,18 +49,22 @@ class ViewController: UIViewController {
         
         // Create OK button with action handler
         let doneButton = UIAlertAction(title: "Play Again", style: .default, handler: { (action) -> Void in
-            self.score = 0
-            self.turns = 0
-            self.time = 10
-            self.scoreLabel.text = "\(self.score)"
-            self.timeLabel.text = "\(self.time)"
-            self.generateRandomNumber()
+            self.reset()
          })
         
         //Add OK button to a dialog message
         message.addAction(doneButton)
         // Present Alert to
         self.present(message, animated: true, completion: nil)
+    }
+    
+    func reset() {
+        score = 0
+        turns = 0
+        time = 10
+        scoreLabel.text = "\(self.score)"
+        timeLabel.text = "\(self.time)"
+        generateRandomNumber()
     }
     
     func performGameCheck(_ number: String, _ input: String) {
