@@ -19,16 +19,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if defaults.dictionary(forKey: "logins") == nil {
+        if defaults.dictionary(forKey: "logins") == nil || defaults.dictionary(forKey: "securityPins") == nil  {
             initializeDefaults()
+        } else {
+            print(defaults.dictionary(forKey: "logins")!)
+            print(defaults.dictionary(forKey: "securityPins")!)
         }
+        
     }
     
     func initializeDefaults() {
         let loginDict: [String: String] = ["Raghav" : "03052004"]
         defaults.set(loginDict, forKey: "logins")
         
-        let securityDict: [String: Int] = ["Raghav" : 1234]
+        let securityDict: [String: String] = ["Raghav" : "1234"]
         defaults.set(securityDict, forKey: "securityPins")
     }
 

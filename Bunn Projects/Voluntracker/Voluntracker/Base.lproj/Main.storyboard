@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="L9N-97-c6R">
             <objects>
-                <viewController id="I9g-Kc-D9J" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="I9g-Kc-D9J" customClass="ViewController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJ6-uP-XPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +73,9 @@
                                                         <state key="normal" title="Forgot Password">
                                                             <color key="titleColor" red="0.98039215690000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="JAk-Nr-iJG" kind="show" id="WPV-rc-vU1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -390,8 +393,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dno-IV-LVF">
                                         <rect key="frame" x="0.0" y="157" width="350" height="62.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gco-bx-gNK">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Pin (4 Char.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gco-bx-gNK">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -449,7 +452,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6U9-vh-TYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779.71014492753625" y="1151.7857142857142"/>
+            <point key="canvasLocation" x="390" y="1165"/>
+        </scene>
+        <!--Recover Password-->
+        <scene sceneID="UN9-mu-1gA">
+            <objects>
+                <viewController id="JAk-Nr-iJG" customClass="ForgotPasswordViewController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="osg-kE-zYh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uEG-nv-hgY">
+                                <rect key="frame" x="32" y="381.5" width="350" height="133"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eqa-6n-au5">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="62.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbm-oE-FaH">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0N-Kd-Rl9">
+                                                <rect key="frame" x="0.0" y="28.5" width="350" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="SgW-SF-ivh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iht-66-q5m">
+                                        <rect key="frame" x="0.0" y="70.5" width="350" height="62.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mte-Qf-uvK">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHX-Mu-nZa">
+                                                <rect key="frame" x="0.0" y="28.5" width="350" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="xlK-BX-ska"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ll-MD-sIc">
+                                <rect key="frame" x="132" y="561" width="150" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="TFD-HZ-XyZ"/>
+                                </constraints>
+                                <state key="normal" title="Recover">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="recoverRequested:" destination="JAk-Nr-iJG" eventType="touchUpInside" id="LPx-z7-krz"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volunteer-icon" translatesAutoresizingMaskIntoConstraints="NO" id="VGa-gi-R4P">
+                                <rect key="frame" x="142.5" y="215" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="HSZ-GF-b7p"/>
+                                    <constraint firstAttribute="height" constant="129" id="e3f-Gb-RBu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fYS-MF-fHt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uEG-nv-hgY" firstAttribute="top" secondItem="VGa-gi-R4P" secondAttribute="bottom" constant="37.5" id="7k0-Wg-1u2"/>
+                            <constraint firstItem="7ll-MD-sIc" firstAttribute="top" secondItem="uEG-nv-hgY" secondAttribute="bottom" constant="46.5" id="D5T-JQ-FiF"/>
+                            <constraint firstItem="uEG-nv-hgY" firstAttribute="centerX" secondItem="osg-kE-zYh" secondAttribute="centerX" id="SWB-6q-XiG"/>
+                            <constraint firstItem="VGa-gi-R4P" firstAttribute="centerX" secondItem="osg-kE-zYh" secondAttribute="centerX" id="isl-dd-jNI"/>
+                            <constraint firstItem="7ll-MD-sIc" firstAttribute="centerX" secondItem="osg-kE-zYh" secondAttribute="centerX" id="rd7-mt-PJg"/>
+                            <constraint firstItem="uEG-nv-hgY" firstAttribute="centerY" secondItem="osg-kE-zYh" secondAttribute="centerY" id="uQn-M6-1ej"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recover Password" id="aFH-E7-G53"/>
+                    <connections>
+                        <outlet property="securityPinField" destination="hHX-Mu-nZa" id="AHC-Mu-cAC"/>
+                        <outlet property="usernameField" destination="X0N-Kd-Rl9" id="BAL-HW-35O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PnJ-fq-vWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226" y="1165"/>
         </scene>
     </scenes>
     <resources>

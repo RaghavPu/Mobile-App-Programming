@@ -18,15 +18,15 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func registerPressed(_ sender: Any) {
-        guard let logins = defaults.dictionary(forKey: "logins") as? [String: String] else {return}
+        guard var logins = defaults.dictionary(forKey: "logins") as? [String: String] else {return}
         
         guard usernameField.text!.count >= 4 else {
-            sendAlert(title: "Invalid Usernam", message: "Username must be atleast 4 characters")
+            sendAlert(title: "Invalid Username", message: "Username must be atleast 4 characters")
             return
         }
         
@@ -40,12 +40,34 @@ class CreateAccountViewController: UIViewController {
             return
         }
         
-        guard securityPinField.text!.count == 4 && isStringAnInt(string: securityPinField.text!) else {
+        guard securityPinField.text!.count == 4 else {
             sendAlert(title: "Invalid Pin", message: "Pin must be a 4-digit numerical value")
             return
         }
         
         // TODO: Impelement saving to defaults
+        logins[usernameField.text!] = passwordField.text!
+        defaults.set(logins, forKey: "logins")
+        
+        if var securityDict = defaults.dictionary(forKey: "securityPins") {
+            securityDict[usernameField.text!] = securityPinField.text!
+            defaults.set(securityDict, forKey: "securityPins")
+        }
+        
+
+        let message = UIAlertController(title: "Success", message: "Account Created Successfully", preferredStyle: .alert)
+         
+         // Create OK button with action handler
+         let ok = UIAlertAction(title: "Login Page", style: .default, handler: { (action) -> Void in
+            _ = self.navigationController?.popToRootViewController(animated: true)
+         })
+         
+         //Add OK button to a dialog message
+         message.addAction(ok)
+        
+         // Present Alert to
+         self.present(message, animated: true, completion: nil)
+        
     }
     
     
@@ -55,9 +77,7 @@ class CreateAccountViewController: UIViewController {
          
          // Create OK button with action handler
          let ok = UIAlertAction(title: "Retry", style: .default, handler: { (action) -> Void in
-            self.usernameField.text = ""
             self.passwordField.text = ""
-            self.securityPinField.text = ""
          })
          
          //Add OK button to a dialog message
@@ -69,6 +89,10 @@ class CreateAccountViewController: UIViewController {
     
     func isStringAnInt(string: String) -> Bool {
         return Int(string) != nil
+    }
+    
+    @IBAction func unwindToLogin(unwindSegue: UIStoryboardSegue) {
+        
     }
     
     /*
