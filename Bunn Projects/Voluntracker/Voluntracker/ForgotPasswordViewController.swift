@@ -22,7 +22,7 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func recoverRequested(_ sender: Any) {
         guard let logins = defaults.dictionary(forKey: "logins") as? [String: String] else {return}
-        guard var securityDict = defaults.dictionary(forKey: "securityPins") as? [String: String] else {return}
+        guard let securityDict = defaults.dictionary(forKey: "securityPins") as? [String: String] else {return}
         
         guard logins[usernameField.text!] != nil else {
             sendAlert(title: "Invalid Username", message: "Username does not exist")

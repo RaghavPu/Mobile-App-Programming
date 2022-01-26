@@ -19,12 +19,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if defaults.dictionary(forKey: "logins") == nil || defaults.dictionary(forKey: "securityPins") == nil  {
+//        if defaults.dictionary(forKey: "logins") == nil || defaults.dictionary(forKey: "securityPins") == nil  {
             initializeDefaults()
-        } else {
-            print(defaults.dictionary(forKey: "logins")!)
-            print(defaults.dictionary(forKey: "securityPins")!)
-        }
+//        } else {
+//            print(defaults.dictionary(forKey: "logins")!)
+//            print(defaults.dictionary(forKey: "securityPins")!)
+//        }
         
     }
     
@@ -34,6 +34,12 @@ class ViewController: UIViewController {
         
         let securityDict: [String: String] = ["Raghav" : "1234"]
         defaults.set(securityDict, forKey: "securityPins")
+        
+        let goalDict: [String: String] = [:]
+        defaults.set(goalDict, forKey: "goals")
+        
+        let amountDict: [String: String] = [:]
+        defaults.set(amountDict, forKey: "hoursAmount")
     }
 
     @IBAction func loginPressed(_ sender: Any) {
@@ -62,5 +68,11 @@ class ViewController: UIViewController {
          self.present(message, animated: true, completion: nil)
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "login" {
+            defaults.setValue(usernameField.text!, forKey: "loggedInUser")
+        }
+    }
 }
 

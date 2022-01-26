@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C1C7E2A279F04EA00ECA22B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1C7E29279F04EA00ECA22B /* ForgotPasswordViewController.swift */; };
+		5C9761CB27A199CB00C4A6CC /* HourGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9761CA27A199CB00C4A6CC /* HourGoalViewController.swift */; };
+		5C9761D027A19F7800C4A6CC /* AccountTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9761CF27A19F7800C4A6CC /* AccountTabBarController.swift */; };
 		5CC0F7DF2799AF7200235CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC0F7DE2799AF7200235CD4 /* AppDelegate.swift */; };
 		5CC0F7E12799AF7200235CD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC0F7E02799AF7200235CD4 /* SceneDelegate.swift */; };
 		5CC0F7E32799AF7200235CD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC0F7E22799AF7200235CD4 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		5C1C7E29279F04EA00ECA22B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		5C9761CA27A199CB00C4A6CC /* HourGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourGoalViewController.swift; sourceTree = "<group>"; };
+		5C9761CF27A19F7800C4A6CC /* AccountTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabBarController.swift; sourceTree = "<group>"; };
 		5CC0F7DB2799AF7200235CD4 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC0F7DE2799AF7200235CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CC0F7E02799AF7200235CD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				5CC0F7EC2799AF7300235CD4 /* Info.plist */,
 				5CC0F8192799C0B600235CD4 /* CreateAccountViewController.swift */,
 				5C1C7E29279F04EA00ECA22B /* ForgotPasswordViewController.swift */,
+				5C9761CA27A199CB00C4A6CC /* HourGoalViewController.swift */,
+				5C9761CF27A19F7800C4A6CC /* AccountTabBarController.swift */,
 			);
 			path = Voluntracker;
 			sourceTree = "<group>";
@@ -264,11 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9761D027A19F7800C4A6CC /* AccountTabBarController.swift in Sources */,
 				5CC0F81A2799C0B600235CD4 /* CreateAccountViewController.swift in Sources */,
 				5C1C7E2A279F04EA00ECA22B /* ForgotPasswordViewController.swift in Sources */,
 				5CC0F7E32799AF7200235CD4 /* ViewController.swift in Sources */,
 				5CC0F7DF2799AF7200235CD4 /* AppDelegate.swift in Sources */,
 				5CC0F7E12799AF7200235CD4 /* SceneDelegate.swift in Sources */,
+				5C9761CB27A199CB00C4A6CC /* HourGoalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

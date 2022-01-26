@@ -44,8 +44,7 @@ class CreateAccountViewController: UIViewController {
             sendAlert(title: "Invalid Pin", message: "Pin must be a 4-digit numerical value")
             return
         }
-        
-        // TODO: Impelement saving to defaults
+
         logins[usernameField.text!] = passwordField.text!
         defaults.set(logins, forKey: "logins")
         

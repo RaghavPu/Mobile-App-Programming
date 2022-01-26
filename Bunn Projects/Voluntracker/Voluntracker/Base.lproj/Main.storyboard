@@ -29,7 +29,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XT0-DF-epE">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="350" id="3Dg-vb-oFt"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="3Dg-vb-oFt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
@@ -118,7 +118,7 @@
         <!--Hello, Username-->
         <scene sceneID="Bu1-8W-9QB">
             <objects>
-                <viewController id="VaC-dJ-dpv" sceneMemberID="viewController">
+                <viewController id="VaC-dJ-dpv" customClass="HourGoalViewController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dC2-GQ-m1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,6 +140,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="nPJ-ac-4du"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="goalChangedSlider:" destination="VaC-dJ-dpv" eventType="valueChanged" id="YCQ-iG-EnP"/>
+                                                </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="50" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOP-RV-eWE">
                                                 <rect key="frame" x="256" y="0.0" width="50" height="34"/>
@@ -148,6 +151,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="goalChangedField:" destination="VaC-dJ-dpv" eventType="editingChanged" id="d20-VO-8je"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -155,11 +161,14 @@
                                         <rect key="frame" x="123" y="96.5" width="60" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="qlz-tg-A7p"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qlz-tg-A7p"/>
                                         </constraints>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveGoal:" destination="VaC-dJ-dpv" eventType="touchUpInside" id="vKt-r1-8Xq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -175,6 +184,10 @@
                         <imageReference key="selectedImage" image="book.fill" catalog="system" symbolScale="default"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Hello, Username" id="8CB-rg-KAW"/>
+                    <connections>
+                        <outlet property="goalSlider" destination="jn2-t2-IF1" id="hIM-CC-4oH"/>
+                        <outlet property="goalTextField" destination="OOP-RV-eWE" id="zLU-W9-jGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKC-N7-Nca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,13 +254,16 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="RHl-ep-t5P">
                                                         <rect key="frame" x="0.0" y="29.5" width="142.5" height="20.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Goal: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX8-uK-cFX">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX8-uK-cFX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="20.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="DZH-tx-9OG"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdh-zz-R6L">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdh-zz-R6L">
                                                                 <rect key="frame" x="120" y="0.0" width="22.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -295,7 +311,7 @@
                                                         <rect key="frame" x="110" y="0.0" width="60" height="34"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="iT3-vx-Nqy"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="iT3-vx-Nqy"/>
                                                         </constraints>
                                                         <state key="normal" title="Submit">
                                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -325,7 +341,7 @@
         <!--Hello, Username-->
         <scene sceneID="UQg-bL-JV0">
             <objects>
-                <tabBarController id="Fql-cV-xxZ" sceneMemberID="viewController">
+                <tabBarController id="Fql-cV-xxZ" customClass="AccountTabBarController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Hello, Username" id="e83-sB-ADP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eqk-2Z-KfT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -422,7 +438,7 @@
                                 <rect key="frame" x="132" y="604.5" width="150" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="o4d-83-CZ8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="o4d-83-CZ8"/>
                                 </constraints>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -509,7 +525,7 @@
                                 <rect key="frame" x="132" y="561" width="150" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="TFD-HZ-XyZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="TFD-HZ-XyZ"/>
                                 </constraints>
                                 <state key="normal" title="Recover">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
