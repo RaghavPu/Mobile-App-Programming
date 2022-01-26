@@ -135,7 +135,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-Rl-Wvz">
                                         <rect key="frame" x="0.0" y="41.5" width="306" height="34"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-t2-IF1">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-t2-IF1">
                                                 <rect key="frame" x="-2" y="0.0" width="254" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="nPJ-ac-4du"/>

@@ -19,12 +19,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        if defaults.dictionary(forKey: "logins") == nil || defaults.dictionary(forKey: "securityPins") == nil  {
+        if defaults.dictionary(forKey: "logins") == nil || defaults.dictionary(forKey: "securityPins") == nil  {
             initializeDefaults()
-//        } else {
-//            print(defaults.dictionary(forKey: "logins")!)
-//            print(defaults.dictionary(forKey: "securityPins")!)
-//        }
+        } else {
+            print(defaults.dictionary(forKey: "logins")!)
+            print(defaults.dictionary(forKey: "securityPins")!)
+        }
         
     }
     
