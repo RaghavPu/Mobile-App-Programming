@@ -214,7 +214,7 @@
         <!--Username Data-->
         <scene sceneID="EOC-vr-gpH">
             <objects>
-                <viewController id="1mI-Ta-g1i" sceneMemberID="viewController">
+                <viewController id="1mI-Ta-g1i" customClass="LogHoursViewController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="drN-tR-aqc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,6 +316,9 @@
                                                         <state key="normal" title="Submit">
                                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="logHourButtonPressed:" destination="1mI-Ta-g1i" eventType="touchUpInside" id="BRJ-aA-qRi"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -333,10 +336,16 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Log" image="square.and.pencil" catalog="system" selectedImage="square.and.pencil" id="lIF-cr-aIf"/>
                     <navigationItem key="navigationItem" title="Username Data" id="LAh-Mc-uJc"/>
+                    <connections>
+                        <outlet property="goalHours" destination="Zdh-zz-R6L" id="83q-d3-UgE"/>
+                        <outlet property="logHoursTextField" destination="CbY-ea-ChS" id="WSO-Qa-T0G"/>
+                        <outlet property="loggedHours" destination="Fec-nr-XZD" id="O1z-Dg-7ms"/>
+                        <outlet property="progressBar" destination="hH6-ua-N5c" id="ldQ-y2-aj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjZ-KA-G07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2459" y="471"/>
+            <point key="canvasLocation" x="2458" y="469"/>
         </scene>
         <!--Hello, Username-->
         <scene sceneID="UQg-bL-JV0">
