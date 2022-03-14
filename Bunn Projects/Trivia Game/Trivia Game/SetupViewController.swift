@@ -53,7 +53,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     override func viewWillDisappear(_ animated: Bool) {
         initialize()
-        print(userDefaults.string(forKey: "Topic"))
+        print(userDefaults.string(forKey: "Topic")!)
         print(userDefaults.integer(forKey: "Questions"))
     }
 

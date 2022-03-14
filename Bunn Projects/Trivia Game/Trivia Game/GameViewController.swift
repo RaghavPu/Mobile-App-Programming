@@ -82,7 +82,7 @@ class GameViewController: UIViewController {
     }
     
     func correctAnimate() {
-        UIView.animate(withDuration: TimeInterval.init(3.0)) {
+        UIView.animate(withDuration: TimeInterval.init(1.5)) {
             for (i, button) in self.buttonsArr.enumerated() {
                 if (i != self.correctAns) {
                     button.layer.backgroundColor = UIColor.red.cgColor

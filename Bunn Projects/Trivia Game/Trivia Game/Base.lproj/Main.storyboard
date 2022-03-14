@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Setup-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SetupViewController" customModule="Trivia_Game" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                             <constraint firstItem="AGk-bV-o3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxX-gV-cln"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zhz-ft-LYj"/>
+                    <tabBarItem key="tabBarItem" title="Setup" image="gearshape.fill" catalog="system" id="zhz-ft-LYj"/>
                     <connections>
                         <outlet property="questionPicker" destination="KzZ-ic-V4L" id="pCz-Oc-Pqe"/>
                         <outlet property="topicPicker" destination="tX3-b7-bvp" id="IeZ-96-Cbi"/>
@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="-46.376811594202906" y="126.5625"/>
         </scene>
-        <!--Item-->
+        <!--Play-->
         <scene sceneID="Vm6-Qa-QIv">
             <objects>
                 <viewController id="Auy-6T-vEf" customClass="GameViewController" customModule="Trivia_Game" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,7 +181,7 @@
                             <constraint firstItem="cG1-DF-7Sa" firstAttribute="bottom" secondItem="OJA-XU-1TF" secondAttribute="bottom" constant="25" id="xer-9o-qMq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="DZG-ax-dnE"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="gamecontroller.fill" catalog="system" id="DZG-ax-dnE"/>
                     <connections>
                         <outlet property="progressBar" destination="dwO-pu-xg2" id="dEK-Q0-PAD"/>
                         <outlet property="questionLabel" destination="TUT-VC-4mp" id="SWU-k5-crf"/>
@@ -271,6 +271,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="80"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
