@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Captcha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="193" translatesAutoresizingMaskIntoConstraints="NO" id="cpS-J2-ptM">
+                                <rect key="frame" x="7" y="244" width="400" height="408.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="47D-L3-Szg">
+                                        <rect key="frame" x="58.5" y="0.0" width="283" height="83.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify image with the following text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGY-n0-9uO">
+                                                <rect key="frame" x="0.0" y="0.0" width="283" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eghks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3H-CF-uC0">
+                                                <rect key="frame" x="73.5" y="28.5" width="136" height="55"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="42"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="a4W-W7-WDa">
+                                        <rect key="frame" x="0.0" y="276.5" width="400" height="132"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-m9-6Op">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2b827.png" translatesAutoresizingMaskIntoConstraints="NO" id="nkN-HM-Bz0" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
+                                                        <gestureRecognizers/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2bg48.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-vB-DKP" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="216" y="0.0" width="184" height="50"/>
+                                                        <gestureRecognizers/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="no6-jy-LFS">
+                                                <rect key="frame" x="0.0" y="82" width="400" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2cegf.png" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-qm-u7r" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
+                                                        <gestureRecognizers/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2cg58.png" translatesAutoresizingMaskIntoConstraints="NO" id="UUO-jn-6xp" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="216" y="0.0" width="184" height="50"/>
+                                                        <gestureRecognizers/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="kcE-QL-2fh"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cpS-J2-ptM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="453-6q-7oX"/>
+                            <constraint firstItem="cpS-J2-ptM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pIX-VB-e68"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="promptText" destination="O3H-CF-uC0" id="HKi-QX-s7k"/>
+                        <outletCollection property="imageViews" destination="nkN-HM-Bz0" collectionClass="NSMutableArray" id="ZOs-ug-5mH"/>
+                        <outletCollection property="imageViews" destination="Qah-vB-DKP" collectionClass="NSMutableArray" id="jeL-3T-0p7"/>
+                        <outletCollection property="imageViews" destination="pk4-qm-u7r" collectionClass="NSMutableArray" id="VID-TC-Gm0"/>
+                        <outletCollection property="imageViews" destination="UUO-jn-6xp" collectionClass="NSMutableArray" id="MUh-rh-Tjb"/>
+                        <segue destination="iA3-0u-rhl" kind="show" identifier="accountBlockedToImage" id="FFO-ot-leb"/>
+                        <segue destination="eju-Tg-vG4" kind="show" identifier="imageToSound" id="COb-qo-y2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9ow-uP-cHC">
+            <objects>
+                <viewController id="iA3-0u-rhl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dse-v0-EEI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account has been blocked for too many incorrect attempts." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm9-Ir-yRz">
+                                <rect key="frame" x="98" y="385" width="218" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="vNr-11-HEf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xdR-mT-idH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pm9-Ir-yRz" firstAttribute="centerY" secondItem="Dse-v0-EEI" secondAttribute="centerY" id="UsN-V4-0J7"/>
+                            <constraint firstItem="pm9-Ir-yRz" firstAttribute="centerX" secondItem="Dse-v0-EEI" secondAttribute="centerX" id="WJp-NM-YHr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8nt-9S-9Gv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYF-gF-k3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244.9275362318842" y="137.94642857142856"/>
+        </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="jff-2p-5v0">
+            <objects>
+                <viewController id="eju-Tg-vG4" customClass="AudioViewController" customModule="Captcha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qE6-hi-bVj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a73-UB-B8B">
+                                <rect key="frame" x="85" y="387" width="242.5" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Speaker to play audio cue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-VK-AAP">
+                                        <rect key="frame" x="0.0" y="0.0" width="242.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7T-ir-vpk">
+                                        <rect key="frame" x="101.5" y="28.5" width="39.5" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <imageReference key="image" image="speaker.wave.3.fill" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playSound:" destination="eju-Tg-vG4" eventType="touchUpInside" id="tNV-qq-US4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RMM-Nx-vYm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="plQ-bx-vf5"/>
+                    <connections>
+                        <segue destination="6g3-1E-hz9" kind="show" id="mx7-vT-Ks6"/>
+                        <segue destination="iA3-0u-rhl" kind="show" id="4HI-cg-eIX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NcU-7r-w3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="859.82142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YE5-pC-0o8">
+            <objects>
+                <viewController id="6g3-1E-hz9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tKC-RN-Rep">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! You are a human!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O5-q2-9aI">
+                                <rect key="frame" x="82" y="397" width="250" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="lIz-3s-9Pb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wA7-8S-8S5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2O5-q2-9aI" firstAttribute="centerX" secondItem="tKC-RN-Rep" secondAttribute="centerX" id="BJm-XB-giR"/>
+                            <constraint firstItem="2O5-q2-9aI" firstAttribute="centerY" secondItem="tKC-RN-Rep" secondAttribute="centerY" id="IAl-Yo-qBo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Do-EB-uGs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c36-fe-1MG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="860"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4HI-cg-eIX"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="2b827.png" width="200" height="50"/>
+        <image name="2bg48.png" width="200" height="50"/>
+        <image name="2cegf.png" width="200" height="50"/>
+        <image name="2cg58.png" width="200" height="50"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="86"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
