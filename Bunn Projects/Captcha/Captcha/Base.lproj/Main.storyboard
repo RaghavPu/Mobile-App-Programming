@@ -134,38 +134,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a73-UB-B8B">
-                                <rect key="frame" x="85" y="387" width="242.5" height="67.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="87" translatesAutoresizingMaskIntoConstraints="NO" id="5c1-gs-0Ms">
+                                <rect key="frame" x="86" y="301.5" width="242.5" height="239.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Speaker to play audio cue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-VK-AAP">
-                                        <rect key="frame" x="0.0" y="0.0" width="242.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7T-ir-vpk">
-                                        <rect key="frame" x="101.5" y="28.5" width="39.5" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                            <imageReference key="image" image="speaker.wave.3.fill" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playSound:" destination="eju-Tg-vG4" eventType="touchUpInside" id="tNV-qq-US4"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a73-UB-B8B">
+                                        <rect key="frame" x="0.0" y="0.0" width="242.5" height="67.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Speaker to play audio cue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-VK-AAP">
+                                                <rect key="frame" x="0.0" y="0.0" width="242.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7T-ir-vpk">
+                                                <rect key="frame" x="101.5" y="28.5" width="39.5" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                    <imageReference key="image" image="speaker.wave.3.fill" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playSound:" destination="eju-Tg-vG4" eventType="touchUpInside" id="tNV-qq-US4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qfe-Z9-IFu">
+                                        <rect key="frame" x="20.5" y="154.5" width="201" height="85"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-yU-Olr">
+                                                <rect key="frame" x="0.0" y="0.0" width="201" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRM-O9-vwO" customClass="CaptchaButtonView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="eju-Tg-vG4" eventType="touchUpInside" id="uY1-VD-SfH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUe-Rl-eB5" customClass="CaptchaButtonView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="155" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="eju-Tg-vG4" eventType="touchUpInside" id="8gb-DO-dE9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="KwQ-Wh-8lI">
+                                                <rect key="frame" x="0.0" y="55" width="201" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="No5-sc-Ufu" customClass="CaptchaButtonView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="eju-Tg-vG4" eventType="touchUpInside" id="wMi-xP-YSs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVM-nR-eY4" customClass="CaptchaButtonView" customModule="Captcha" customModuleProvider="target">
+                                                        <rect key="frame" x="155" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="eju-Tg-vG4" eventType="touchUpInside" id="ATH-5L-BdO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RMM-Nx-vYm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5c1-gs-0Ms" firstAttribute="centerX" secondItem="qE6-hi-bVj" secondAttribute="centerX" id="1RT-F7-k6L"/>
+                            <constraint firstItem="5c1-gs-0Ms" firstAttribute="centerY" secondItem="qE6-hi-bVj" secondAttribute="centerY" id="L14-ty-N0M"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="plQ-bx-vf5"/>
                     <connections>
-                        <segue destination="6g3-1E-hz9" kind="show" id="mx7-vT-Ks6"/>
-                        <segue destination="iA3-0u-rhl" kind="show" id="4HI-cg-eIX"/>
+                        <outletCollection property="buttons" destination="GRM-O9-vwO" collectionClass="NSMutableArray" id="Ue8-ff-v74"/>
+                        <outletCollection property="buttons" destination="KUe-Rl-eB5" collectionClass="NSMutableArray" id="FbH-VE-OKh"/>
+                        <outletCollection property="buttons" destination="No5-sc-Ufu" collectionClass="NSMutableArray" id="hIG-aP-T42"/>
+                        <outletCollection property="buttons" destination="eVM-nR-eY4" collectionClass="NSMutableArray" id="eEc-Ug-coA"/>
+                        <segue destination="6g3-1E-hz9" kind="show" identifier="soundToSuccess" id="mx7-vT-Ks6"/>
+                        <segue destination="iA3-0u-rhl" kind="show" identifier="soundBlock" id="4HI-cg-eIX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcU-7r-w3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

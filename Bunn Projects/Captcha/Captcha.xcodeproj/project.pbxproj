@@ -10,6 +10,7 @@
 		5C17479B27E2244B0063284B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5C17479A27E2244B0063284B /* Sounds */; };
 		5C1747AB27E22CEF0063284B /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 5C1747AA27E22CEF0063284B /* Images */; };
 		5C1747B027E236B70063284B /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1747AF27E236B70063284B /* AudioViewController.swift */; };
+		5C73D0ED27F1F50D00968C7E /* CaptchaButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73D0EC27F1F50D00968C7E /* CaptchaButtonView.swift */; };
 		5CF29E0527DF8DF20021A3C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF29E0427DF8DF20021A3C8 /* AppDelegate.swift */; };
 		5CF29E0727DF8DF20021A3C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF29E0627DF8DF20021A3C8 /* SceneDelegate.swift */; };
 		5CF29E0927DF8DF20021A3C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF29E0827DF8DF20021A3C8 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		5C17479A27E2244B0063284B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../../Downloads/Captcha files/Sounds"; sourceTree = "<group>"; };
 		5C1747AA27E22CEF0063284B /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = "../../../../../../Downloads/Captcha files 2/Images"; sourceTree = "<group>"; };
 		5C1747AF27E236B70063284B /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		5C73D0EC27F1F50D00968C7E /* CaptchaButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptchaButtonView.swift; sourceTree = "<group>"; };
 		5CF29E0127DF8DF20021A3C8 /* Captcha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captcha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF29E0427DF8DF20021A3C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CF29E0627DF8DF20021A3C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				5CF29E1227DF8DF30021A3C8 /* Info.plist */,
 				5CF29E3C27DF8EAC0021A3C8 /* CaptchaImageView.swift */,
 				5C1747AF27E236B70063284B /* AudioViewController.swift */,
+				5C73D0EC27F1F50D00968C7E /* CaptchaButtonView.swift */,
 			);
 			path = Captcha;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF29E0927DF8DF20021A3C8 /* ViewController.swift in Sources */,
+				5C73D0ED27F1F50D00968C7E /* CaptchaButtonView.swift in Sources */,
 				5CF29E0527DF8DF20021A3C8 /* AppDelegate.swift in Sources */,
 				5CF29E0727DF8DF20021A3C8 /* SceneDelegate.swift in Sources */,
 				5CF29E3D27DF8EAC0021A3C8 /* CaptchaImageView.swift in Sources */,
