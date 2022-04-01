@@ -1224,6 +1224,62 @@
                         <outletCollection property="gameFrames" destination="sRN-Qe-GVu" collectionClass="NSMutableArray" id="NMo-Tr-fJk"/>
                         <outletCollection property="gameFrames" destination="FCm-ru-Fe1" collectionClass="NSMutableArray" id="nBe-SZ-pqY"/>
                         <outletCollection property="gameFrames" destination="ev3-R0-tKS" collectionClass="NSMutableArray" id="4JF-Ji-M1M"/>
+                        <outletCollection property="frameViews" destination="218-3E-sop" collectionClass="NSMutableArray" id="2x4-0r-hhF"/>
+                        <outletCollection property="frameViews" destination="RUs-rb-aoh" collectionClass="NSMutableArray" id="ZmT-aZ-fgK"/>
+                        <outletCollection property="frameViews" destination="93v-H4-62y" collectionClass="NSMutableArray" id="iE0-4u-VbB"/>
+                        <outletCollection property="frameViews" destination="2PQ-4e-Xgl" collectionClass="NSMutableArray" id="8UM-fE-2qd"/>
+                        <outletCollection property="frameViews" destination="xdd-bk-qd3" collectionClass="NSMutableArray" id="0ew-7T-92D"/>
+                        <outletCollection property="frameViews" destination="xB7-y1-G88" collectionClass="NSMutableArray" id="YVo-el-WL9"/>
+                        <outletCollection property="frameViews" destination="vBk-5I-YN7" collectionClass="NSMutableArray" id="Wlx-0j-9T0"/>
+                        <outletCollection property="frameViews" destination="e8v-DN-ktO" collectionClass="NSMutableArray" id="wM4-dr-VZC"/>
+                        <outletCollection property="frameViews" destination="Yqg-mD-F6N" collectionClass="NSMutableArray" id="icP-Ny-hNB"/>
+                        <outletCollection property="frameViews" destination="hFo-NA-CiQ" collectionClass="NSMutableArray" id="Fxp-KB-jeO"/>
+                        <outletCollection property="frameViews" destination="gQt-4r-ZMf" collectionClass="NSMutableArray" id="V6T-Hn-l3y"/>
+                        <outletCollection property="frameViews" destination="nYY-rt-6IE" collectionClass="NSMutableArray" id="0zY-l5-MwA"/>
+                        <outletCollection property="frameViews" destination="OKM-ES-KNQ" collectionClass="NSMutableArray" id="X32-xn-PmR"/>
+                        <outletCollection property="frameViews" destination="hNO-En-3BI" collectionClass="NSMutableArray" id="kua-c9-o9f"/>
+                        <outletCollection property="frameViews" destination="Lxn-Yi-8kX" collectionClass="NSMutableArray" id="KJb-kU-dys"/>
+                        <outletCollection property="frameViews" destination="4z0-cw-x95" collectionClass="NSMutableArray" id="pmp-S2-eDd"/>
+                        <outletCollection property="frameViews" destination="Na5-lM-igX" collectionClass="NSMutableArray" id="7oc-Xi-tee"/>
+                        <outletCollection property="frameViews" destination="eqO-wU-47D" collectionClass="NSMutableArray" id="TYT-M5-7An"/>
+                        <outletCollection property="frameViews" destination="Jjp-Fz-jlt" collectionClass="NSMutableArray" id="A2F-5R-P5K"/>
+                        <outletCollection property="frameViews" destination="yYG-T1-TJY" collectionClass="NSMutableArray" id="oLa-Fl-rq0"/>
+                        <outletCollection property="frameViews" destination="0aK-VZ-31D" collectionClass="NSMutableArray" id="Xjv-1v-dxK"/>
+                        <outletCollection property="frameViews" destination="vc7-ub-cZU" collectionClass="NSMutableArray" id="PF8-39-E25"/>
+                        <outletCollection property="frameViews" destination="q0g-ri-gMd" collectionClass="NSMutableArray" id="lbF-nO-JJQ"/>
+                        <outletCollection property="frameViews" destination="7dv-n2-Hw3" collectionClass="NSMutableArray" id="7pl-FU-4WJ"/>
+                        <outletCollection property="frameViews" destination="8pa-jx-F3P" collectionClass="NSMutableArray" id="wOl-1c-dHR"/>
+                        <outletCollection property="frameViews" destination="KXG-F9-U78" collectionClass="NSMutableArray" id="ODX-S9-oMP"/>
+                        <outletCollection property="frameViews" destination="cEB-om-CKX" collectionClass="NSMutableArray" id="mg9-bg-Tp6"/>
+                        <outletCollection property="frameViews" destination="bMv-SK-Yas" collectionClass="NSMutableArray" id="ggh-Zs-Vhg"/>
+                        <outletCollection property="frameViews" destination="JmD-JK-FgC" collectionClass="NSMutableArray" id="Zc4-d0-Ohr"/>
+                        <outletCollection property="frameViews" destination="jMJ-Sc-HfC" collectionClass="NSMutableArray" id="JP9-p5-dom"/>
+                        <outletCollection property="keyboardViews" destination="PPx-wk-IJe" collectionClass="NSMutableArray" id="ySO-H4-WUz"/>
+                        <outletCollection property="keyboardViews" destination="ZXN-ia-LrW" collectionClass="NSMutableArray" id="6js-We-c19"/>
+                        <outletCollection property="keyboardViews" destination="rIZ-UR-CQg" collectionClass="NSMutableArray" id="bwE-kF-D54"/>
+                        <outletCollection property="keyboardViews" destination="jyK-Fi-4wS" collectionClass="NSMutableArray" id="BPy-D3-dud"/>
+                        <outletCollection property="keyboardViews" destination="mx9-2o-IQv" collectionClass="NSMutableArray" id="SBk-pC-hb3"/>
+                        <outletCollection property="keyboardViews" destination="jof-Rt-V1U" collectionClass="NSMutableArray" id="Ym5-Tj-K2s"/>
+                        <outletCollection property="keyboardViews" destination="0sr-i1-cWc" collectionClass="NSMutableArray" id="GmL-d6-zKG"/>
+                        <outletCollection property="keyboardViews" destination="8wn-NN-JLC" collectionClass="NSMutableArray" id="tWI-AF-rbX"/>
+                        <outletCollection property="keyboardViews" destination="Jcg-Nz-7T2" collectionClass="NSMutableArray" id="eok-YN-frD"/>
+                        <outletCollection property="keyboardViews" destination="vMr-iP-jCw" collectionClass="NSMutableArray" id="ze7-9Q-Rmx"/>
+                        <outletCollection property="keyboardViews" destination="Y0P-ZF-PiY" collectionClass="NSMutableArray" id="8CF-ne-Blf"/>
+                        <outletCollection property="keyboardViews" destination="HNH-kq-tZa" collectionClass="NSMutableArray" id="0Fj-LP-cwr"/>
+                        <outletCollection property="keyboardViews" destination="GgT-vu-fsk" collectionClass="NSMutableArray" id="bl2-vT-t1u"/>
+                        <outletCollection property="keyboardViews" destination="nHr-fd-FxW" collectionClass="NSMutableArray" id="DbO-M4-DJF"/>
+                        <outletCollection property="keyboardViews" destination="26a-Hg-Yri" collectionClass="NSMutableArray" id="8zY-Ex-r6Y"/>
+                        <outletCollection property="keyboardViews" destination="aKS-WL-wyl" collectionClass="NSMutableArray" id="Tq8-3S-d0E"/>
+                        <outletCollection property="keyboardViews" destination="7YL-ts-kaJ" collectionClass="NSMutableArray" id="VDy-6h-npY"/>
+                        <outletCollection property="keyboardViews" destination="jQ7-er-XGM" collectionClass="NSMutableArray" id="RTB-za-b3S"/>
+                        <outletCollection property="keyboardViews" destination="US8-AN-h1a" collectionClass="NSMutableArray" id="sxa-22-iKR"/>
+                        <outletCollection property="keyboardViews" destination="P62-dr-Zrm" collectionClass="NSMutableArray" id="BWF-Gd-Mgi"/>
+                        <outletCollection property="keyboardViews" destination="hUV-Ku-5f8" collectionClass="NSMutableArray" id="Ebe-SP-605"/>
+                        <outletCollection property="keyboardViews" destination="4Bc-MN-rOF" collectionClass="NSMutableArray" id="1y2-Qd-dvu"/>
+                        <outletCollection property="keyboardViews" destination="y49-Ej-7bf" collectionClass="NSMutableArray" id="eDm-cL-8Ot"/>
+                        <outletCollection property="keyboardViews" destination="zOm-XI-Cyq" collectionClass="NSMutableArray" id="GkF-DC-yfg"/>
+                        <outletCollection property="keyboardViews" destination="889-Pf-pwZ" collectionClass="NSMutableArray" id="3dX-V6-VsJ"/>
+                        <outletCollection property="keyboardViews" destination="3Dx-ge-Nrt" collectionClass="NSMutableArray" id="pyx-4l-RfC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

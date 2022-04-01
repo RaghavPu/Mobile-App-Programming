@@ -19,7 +19,6 @@ class LogHoursViewController: UIViewController {
     
     @IBOutlet var logHoursTextField: UITextField!
     
-    var screenSize: CGRect = UIScreen.main.bounds
     var timerCount = 0
     var timer = Timer()
     var celebrationEmojis = ["🥳", "🎉", "👏", "🎊"]

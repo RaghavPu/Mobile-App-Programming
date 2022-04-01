@@ -6,35 +6,59 @@
 //
 
 import Foundation
+import UIKit
 
 class Game {
     var wordSet: Set<String>
+    var correctWord: String
+    
+    var letters: [String:UIColor]
     
     init() {
         wordSet = Set<String>()
+        letters = [:]
+        correctWord = ""
         loadWordsDictionary()
+        newWord()
     }
     
     func loadWordsDictionary() {
-        let file = "dictionary.txt"
-         
-        var result = ""
-         
-        //if you get access to the directory
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-         
-            //prepare file url
-            print(dir)
-            let fileURL = dir.appendingPathComponent(file)
-         
+        if let dir = Bundle.main.url(forResource: "dictionary", withExtension: "txt", subdirectory: "") {
+
+            //reading
             do {
-                result = try String(contentsOf: fileURL, encoding: .utf8)
-                print(result)
+                let text2 = try String(contentsOf: dir, encoding: .utf8)
+                let words = text2.split(separator: "\n")
+                for word in words {
+                    if word.count == 5 {
+                        wordSet.insert(String(word))
+                    }
+                }
             }
             catch {print(error.localizedDescription)}
         }
-         
-        print(result)
-        
+    }
+    
+    func checkWord(word: String) -> Bool {
+        return wordSet.contains(word)
+    }
+    
+    func newWord() {
+        correctWord = wordSet.randomElement()!
+        letters = [:]
+    }
+    
+    func checkLetters(word: String) {
+        let characters = Array(word)
+        for c in 0..<characters.count {
+            if characters[c] == Array(correctWord)[c] {
+                letters[String(characters[c])] = .green
+            } else if correctWord.contains(characters[c]) {
+                letters[String(characters[c])] = .yellow
+            } else {
+                letters[String(characters[c])] = .darkGray
+            }
+        }
+
     }
 }
